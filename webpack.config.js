@@ -2,6 +2,8 @@ var path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
+  mode: 'production',
+
   entry: './lib/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -15,7 +17,10 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: {},
+        exclude: /node_modules/,
+        use: {
+          loader: 'babel-loader',
+        },
       },
     ],
   },
