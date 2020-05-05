@@ -5,11 +5,11 @@ Simple encapsulation of event subscription and publication
 ## Installation
 
 ```sh
-npm install eventemitter
+npm install eventemitter-ice
 
 # or
 
-yarn add eventemitter
+yarn add eventemitter-ice
 ```
 
 ## Usage
@@ -17,13 +17,13 @@ yarn add eventemitter
 CDN
 
 ```html
-<script src=".../event-emitter.min.js"></script>
+<script src="./dist/event-emitter.js"></script>
 ```
 
 Module
 
 ```js
-import EventEmitter from 'eventemitter'
+import EventEmitter from 'eventemitter-ice'
 
 const eventEmitter = new EventEmitter()
 ```
@@ -31,7 +31,7 @@ const eventEmitter = new EventEmitter()
 ## Example
 
 ```js
-import EventEmitter from 'eventemitter'
+import EventEmitter from 'eventemitter-ice'
 
 const emitter = new EventEmitter()
 emitter.on('close', function (data) {

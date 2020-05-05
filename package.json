@@ -1,5 +1,5 @@
 {
-  "name": "eventemitter",
+  "name": "eventemitter-ice",
   "version": "0.1.0",
   "description": "Simple encapsulation of event subscription and publication",
   "main": "dist/event-emitter.js",

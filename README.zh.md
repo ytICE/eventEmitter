@@ -5,11 +5,11 @@
 ## 安装
 
 ```sh
-npm install eventemitter
+npm install eventemitter-ice
 
 # 或者
 
-yarn add eventemitter
+yarn add eventemitter-ice
 ```
 
 ## 使用
@@ -17,13 +17,13 @@ yarn add eventemitter
 CDN
 
 ```html
-<script src=".../event-emitter.min.js"></script>
+<script src="./dist/event-emitter.js"></script>
 ```
 
 模块中引用
 
 ```js
-import EventEmitter from 'eventemitter'
+import EventEmitter from 'eventemitter-ice'
 
 const eventEmitter = new EventEmitter()
 ```
@@ -31,7 +31,7 @@ const eventEmitter = new EventEmitter()
 ## 示例
 
 ```js
-import EventEmitter from 'eventemitter'
+import EventEmitter from 'eventemitter-ice'
 
 const emitter = new EventEmitter()
 emitter.on('close', function (data) {
