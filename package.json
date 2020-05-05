@@ -1,0 +1,50 @@
+{
+  "name": "eventemitter",
+  "version": "0.1.0",
+  "description": "Simple encapsulation of event subscription and publication",
+  "main": "dist/event-emitter.js",
+  "files": [
+    "dist"
+  ],
+  "directories": {
+    "doc": "doc",
+    "lib": "lib"
+  },
+  "scripts": {
+    "build": "webpack",
+    "lint": "npm run lint:script:fix && npm run lint:style",
+    "lint:script": "eslint --ext '.js' lib",
+    "lint:script:fix": "eslint --ext '.js' lib --fix",
+    "lint:style": "prettier --check --write './**/**' --config ./.prettierrc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ytICE/eventEmitter.git"
+  },
+  "keywords": [
+    "event",
+    "emitter"
+  ],
+  "author": "ytICE",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ytICE/eventEmitter/issues"
+  },
+  "homepage": "https://github.com/ytICE/eventEmitter#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "prettier": "2.0.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

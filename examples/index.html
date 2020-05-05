@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>EventEmitter</title>
+    <link rel="stylesheet" href="./normalize.css" />
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <button onclick="emitClose()" class="button--primary">emitClose</button>
+    </div>
+    <script type="text/javascript" src="../dist/event-emitter.js"></script>
+    <script>
+      const emitter = new EventEmitter()
+
+      emitter.on('close', function (data) {
+        const div = document.createElement('div')
+        div.innerText = `输入： ${data}`
+        document.body.appendChild(div)
+      })
+
+      function emitClose() {
+        const message = prompt('请输入需要发布close事件透传的信息？')
+        emitter.emit('close', message)
+      }
+    </script>
+  </body>
+</html>
